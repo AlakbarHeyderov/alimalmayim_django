@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4ae6ac1410.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    {% comment %} <link rel="stylesheet" href="../static/css/style.css"> {% endcomment %}
+    <title>Alim yoxsa almayim?</title>
+</head>
+<body>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+    {% include "includes/navbar.html" %}
+
+
+
+       {% block import_hisse %}
+       
+
+       {% endblock import_hisse %}
+
+
+    {%include "includes/header.html"%}
+
+
+<script src="{% static 'js/main.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "leyout.html" %}
+{% load crispy_forms_tags %}
+{% block import_hisse %}
+<div class = "container"  >
+    <p style="font-size: 40px; font-weight: bold; margin-top: 80px;">Daxil Ol</p>
+    <hr>
+    
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form|crispy}}
+    <button type = "submit" class = "btn" style="margin-top: 10px; margin-bottom: 80px;">Daxil ol</button>
+</div>
+{% endblock import_hisse %}
